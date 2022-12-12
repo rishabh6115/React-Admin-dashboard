@@ -34,7 +34,6 @@ import { useLocation, useNavigate } from "react-router-dom";
 import FlexBetween from "./FlexBetween";
 import profileImage from "assets/profile.jpeg";
 
-
 const navItems = [
   {
     text: "Dashboard",
@@ -93,19 +92,22 @@ const navItems = [
     icon: <TrendingUpOutlined />,
   },
 ];
-const Sidebar = ({user,drawerWidth,isSideBarOpen,setIsSideBarOpen,isNonMobile,}) => {
-
-  
-
+const Sidebar = ({
+  user,
+  drawerWidth,
+  isSideBarOpen,
+  setIsSideBarOpen,
+  isNonMobile,
+}) => {
   const { pathname } = useLocation();
   const [active, setActive] = useState("");
   const navigate = useNavigate();
   const theme = useTheme();
-    useEffect(() => {
+  useEffect(() => {
     setActive(pathname.substring(1));
   }, [pathname]);
   return (
-    <Box component="nav" >
+    <Box component="nav">
       {isSideBarOpen && (
         <Drawer
           open={isSideBarOpen}
@@ -189,18 +191,29 @@ const Sidebar = ({user,drawerWidth,isSideBarOpen,setIsSideBarOpen,isNonMobile,})
               })}
             </List>
           </Box>
-              <Box my='1rem' bottom='2rem' >
-                <Divider/>
-                <FlexBetween gap='1rem' m='1.5rem 2rem 0 3rem'>
-                <Avatar alt="Profile" src={profileImage} />
-                      <Box textAlign='left' >
-                        <Typography  fontSize='0.75rem' sx={{color:theme.palette.secondary[100]}}> {user.name}</Typography>
-                        <Typography  fontSize='0.75rem' sx={{color:theme.palette.secondary[100]}}> {user.occupation}</Typography>
-                      </Box>
-                      <SettingsOutlined sx={{color:theme.palette.secondary[300],fontSize:'25px'}}/> 
-                </FlexBetween>
+          <Box my="1rem" bottom="2rem">
+            <Divider />
+            <FlexBetween gap="1rem" m="1.5rem 2rem 0 3rem">
+              <Avatar alt="Profile" src={profileImage} />
+              <Box textAlign="left">
+                <Typography
+                  fontSize="0.75rem"
+                  sx={{ color: theme.palette.secondary[100] }}
+                >
+                  {user.name}
+                </Typography>
+                <Typography
+                  fontSize="0.75rem"
+                  sx={{ color: theme.palette.secondary[100] }}
+                >
+                  {user.occupation}
+                </Typography>
               </Box>
-        
+              <SettingsOutlined
+                sx={{ color: theme.palette.secondary[300], fontSize: "25px" }}
+              />
+            </FlexBetween>
+          </Box>
         </Drawer>
       )}
     </Box>
