@@ -160,10 +160,17 @@ const Sidebar = ({
                         setActive(lcText);
                       }}
                       sx={{
+                        "&:hover": {
+                          backgroundColor:
+                            active === lcText
+                              ? theme.palette.secondary[300]
+                              : "",
+                        },
                         backgroundColor:
                           active === lcText
                             ? theme.palette.secondary[300]
                             : "transparent",
+
                         color:
                           active === lcText
                             ? theme.palette.primary[600]

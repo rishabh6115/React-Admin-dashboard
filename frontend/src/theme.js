@@ -22,14 +22,14 @@ export const tokensDark = {
     300: "#7a7f9d",
     400: "#4d547d",
     500: "#21295c",
-    600: "#191F45", // manually adjusted
+    600: "#191F45",
     700: "#141937",
     800: "#0d1025",
     900: "#070812",
   },
   secondary: {
     // yellow
-    50: "#f0f0f0", // manually adjusted
+    50: "#f0f0f0",
     100: "#fff6e0",
     200: "#ffedc2",
     300: "#ffe3a3",

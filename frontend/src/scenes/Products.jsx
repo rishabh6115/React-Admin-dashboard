@@ -10,6 +10,7 @@ import {
   Rating,
   useTheme,
   useMediaQuery,
+  CircularProgress,
 } from "@mui/material";
 import Header from "components/Header";
 import { useGetProductsQuery } from "state/api";
@@ -26,7 +27,6 @@ const Product = ({
 }) => {
   const theme = useTheme();
   const [isExpanded, setIsExpanded] = useState(false);
-
   return (
     <Card
       sx={{
@@ -74,10 +74,10 @@ const Product = ({
           <Typography>id: {_id}</Typography>
           <Typography>Supply Left: {supply}</Typography>
           <Typography>
-            Yearly Sales This Year: {stat.yearlySalesTotal}
+            Yearly Sales This Year: {stat[0].yearlySalesTotal}
           </Typography>
           <Typography>
-            Yearly Units Sold This Year: {stat.yearlyTotalSoldUnits}
+            Yearly Units Sold This Year: {stat[0].yearlyTotalSoldUnits}
           </Typography>
         </CardContent>
       </Collapse>
@@ -130,7 +130,16 @@ const Products = () => {
           )}
         </Box>
       ) : (
-        <>Loading...</>
+        <Box
+          minHeight="70vh"
+          sx={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <CircularProgress />
+        </Box>
       )}
     </Box>
   );
