@@ -59,7 +59,12 @@ const Dashboard = () => {
 
   return (
     <Box m="1.5rem 2.5rem">
-      <FlexBetween>
+      <FlexBetween
+        sx={{
+          flexDirection: ["column", "column", "row"],
+          gap: ["1rem", 0],
+        }}
+      >
         <Header title="DASHBOARD" subtitle="Welcome to your dashboard" />
 
         <Box>
@@ -67,10 +72,9 @@ const Dashboard = () => {
             sx={{
               backgroundColor: theme.palette.secondary.light,
               color: theme.palette.background.alt,
-              fontSize: "14px",
+              fontSize: ["8px", "10px", "14px"],
               fontWeight: "bold",
-              padding: "10px 20px",
-              "&:hover": { backgroundColor: theme.palette.secondary.light },
+              padding: ["5px 10px", "5px 10px", "10px 20px"],
             }}
           >
             <DownloadOutlined

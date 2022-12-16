@@ -156,6 +156,9 @@ const Sidebar = ({
                   <ListItem key={text} disablePadding>
                     <ListItemButton
                       onClick={() => {
+                        if (!isNonMobile) {
+                          setIsSideBarOpen(false);
+                        }
                         navigate(`/${lcText}`);
                         setActive(lcText);
                       }}
