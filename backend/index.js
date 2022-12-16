@@ -15,12 +15,14 @@ import User from "./models/User.js";
 import Product from "./models/Product.js";
 import ProductStat from "./models/ProductStat.js";
 import Transaction from "./models/Transaction.js";
+import AffiliateStat from "./models/AffiliateStat.js";
 import {
   dataUser,
   dataProduct,
   dataProductStat,
   dataTransaction,
   dataOverallStat,
+  dataAffiliateStat,
 } from "./data/index.js";
 import OverAllStat from "./models/OverallStat.js";
 
@@ -48,11 +50,14 @@ mongoose
     useUnifiedTopology: true,
   })
   .then(() => {
+    /* INSERT ONLY ONCE */
+
     // User.insertMany(dataUser);
     // Product.insertMany(dataProduct);
     // ProductStat.insertMany(dataProductStat);
     // Transaction.insertMany(dataTransaction);
     // OverAllStat.insertMany(dataOverallStat);
+    // AffiliateStat.insertMany(dataAffiliateStat);
     app.listen(PORT, () => {
       console.log(`Running on PORT: ${PORT}`);
     });
