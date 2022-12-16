@@ -8,6 +8,8 @@ const OverViewChat = ({ isDashboard = false, view }) => {
 
   const { data, isLoading } = useGetSalesQuery();
 
+  console.log(data);
+
   const [totalSalesLine, totalUnitsLine] = useMemo(() => {
     if (!data) return [];
 

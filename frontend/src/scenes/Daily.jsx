@@ -8,9 +8,8 @@ import { useTheme } from "@mui/material/styles";
 import { useGetSalesQuery } from "../state/api";
 
 const Daily = () => {
-  const [startDate, setStartDate] = useState(new Date("2021-02-01"));
-  const [endDate, setEndDate] = useState(new Date("2021-03-01"));
-  const [value, setValue] = React.useState(["2021-02-01", "2021-03-01"]);
+  const [startDate] = useState(new Date("2021-02-01"));
+  const [endDate] = useState(new Date("2021-03-01"));
 
   const { data } = useGetSalesQuery();
   const theme = useTheme();
