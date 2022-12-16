@@ -21,10 +21,11 @@ import {
   Toolbar,
   Typography,
 } from "@mui/material";
-import { useTheme } from "@mui/material/styles";  
-import FlexBetween from "components/FlexBetween";
-import { setMode } from "state";
-import profileImage from "assets/profile.jpeg";
+import { useTheme } from "@mui/material/styles";
+import FlexBetween from "./FlexBetween";
+import { setMode } from "../state/index.js";
+
+import profileImage from "../assets/profile.jpeg";
 
 const NavBar = ({ user, setIsSideBarOpen, isSideBarOpen }) => {
   const dispatch = useDispatch();

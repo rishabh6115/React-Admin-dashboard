@@ -1,9 +1,9 @@
 import { Box, useTheme } from "@mui/material";
 import { DataGrid } from "@mui/x-data-grid";
-import DataGridCustomToolbar from "components/DataGridCustomToolbar";
-import Header from "components/Header";
+import DataGridCustomToolbar from "../components/DataGridCustomToolbar";
+import Header from "../components/Header";
 import React, { useState } from "react";
-import { useGetTransactionQuery } from "state/api";
+import { useGetTransactionQuery } from "../state/api";
 
 const Transactions = () => {
   const [page, setPage] = useState(0);

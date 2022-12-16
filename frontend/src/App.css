@@ -30,3 +30,7 @@ body,
   ::-webkit-scrollbar-thumb:hover {
     background: #ffda85;
   }
+
+  text{
+    fill: white !important;
+  }

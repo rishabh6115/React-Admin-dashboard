@@ -1,7 +1,7 @@
-import { Box, useTheme } from "@mui/material";
+import { useTheme } from "@mui/material";
 import { ResponsiveLine } from "@nivo/line";
 import React, { useMemo } from "react";
-import { useGetSalesQuery } from "state/api";
+import { useGetSalesQuery } from "../state/api";
 
 const OverViewChat = ({ isDashboard = false, view }) => {
   const theme = useTheme();

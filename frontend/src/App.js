@@ -1,17 +1,21 @@
 import "./App.css";
+import React from "react";
 import { CssBaseline } from "@mui/material";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { useMemo } from "react";
 import { useSelector } from "react-redux";
-import { themeSettings } from "theme";
+import { themeSettings } from "./theme";
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
-import Layout from "scenes/LayOut.jsx";
-import Dashboard from "scenes/DashBoard.jsx";
-import Products from "scenes/Products";
-import Customers from "scenes/Customers";
-import Transactions from "scenes/Transactions";
-import Geography from "scenes/Geography";
-import Overview from "scenes/Overview";
+import Layout from "./scenes/LayOut.jsx";
+import Dashboard from "./scenes/DashBoard.jsx";
+import Products from "./scenes/Products";
+import Customers from "./scenes/Customers";
+import Transactions from "./scenes/Transactions";
+import Geography from "./scenes/Geography";
+import Overview from "./scenes/Overview";
+import Daily from "./scenes/Daily";
+import Monthly from "./scenes/Monthly";
+import Breakdown from "./scenes/Breakdown";
 
 function App() {
   const mode = useSelector((state) => state.global.mode);
@@ -30,6 +34,9 @@ function App() {
               <Route path="/transactions" element={<Transactions />} />
               <Route path="/geography" element={<Geography />} />
               <Route path="/overview" element={<Overview />} />
+              <Route path="/daily" element={<Daily />} />
+              <Route path="/monthly" element={<Monthly />} />
+              <Route path="/breakdown" element={<Breakdown />} />
             </Route>
           </Routes>
         </ThemeProvider>

@@ -1,6 +1,6 @@
 import { Box, FormControl, InputLabel, MenuItem, Select } from "@mui/material";
-import Header from "components/Header";
-import OverViewChat from "components/OverViewChat";
+import Header from "../components/Header";
+import OverViewChat from "../components/OverViewChat";
 import React, { useState } from "react";
 
 const Overview = () => {
